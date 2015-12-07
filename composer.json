@@ -7,8 +7,10 @@
     },
     "require-dev": {
         "ext-curl": "*",
-        "mashape/unirest-php": "2.*",
-        "phpunit/phpunit": "5.0.*"
+        "phpunit/phpunit": "5.0.*",
+        "guzzlehttp/guzzle": "~6.0",
+        "php-vcr/php-vcr": "dev-master",
+        "php-vcr/phpunit-testlistener-vcr": "*"
     },
     "autoload": {
         "psr-4": {
