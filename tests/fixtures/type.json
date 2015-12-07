@@ -1,0 +1,57 @@
+[{
+    "request": {
+        "method": "GET",
+        "url": "http:\/\/pokeapi.co\/api\/v1\/type\/1",
+        "headers": {
+            "Host": "pokeapi.co",
+            "Accept-Encoding": null,
+            "User-Agent": "GuzzleHttp\/6.1.1 curl\/7.43.0 PHP\/5.6.16",
+            "Accept": null
+        }
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "301",
+            "message": "MOVED PERMANENTLY"
+        },
+        "headers": {
+            "Server": "nginx\/1.1.19",
+            "Date": "Mon, 07 Dec 2015 11:20:46 GMT",
+            "Content-Type": "text\/html; charset=utf-8",
+            "Transfer-Encoding": "chunked",
+            "Connection": "keep-alive",
+            "X-Frame-Options": "SAMEORIGIN",
+            "Location": "http:\/\/pokeapi.co\/api\/v1\/type\/1\/"
+        }
+    }
+},{
+    "request": {
+        "method": "GET",
+        "url": "http:\/\/pokeapi.co\/api\/v1\/type\/1\/",
+        "headers": {
+            "Host": "pokeapi.co",
+            "Accept-Encoding": null,
+            "User-Agent": "GuzzleHttp\/6.1.1 curl\/7.43.0 PHP\/5.6.16",
+            "Accept": null
+        }
+    },
+    "response": {
+        "status": {
+            "http_version": "1.1",
+            "code": "200",
+            "message": "OK"
+        },
+        "headers": {
+            "Server": "nginx\/1.1.19",
+            "Date": "Mon, 07 Dec 2015 11:20:49 GMT",
+            "Content-Type": "application\/json",
+            "Transfer-Encoding": "chunked",
+            "Connection": "keep-alive",
+            "Vary": "Accept",
+            "X-Frame-Options": "SAMEORIGIN",
+            "Cache-Control": "s-maxage=360, max-age=360"
+        },
+        "body": "{\"created\": \"2013-11-02T12:08:58.787000\", \"id\": 1, \"ineffective\": [{\"name\": \"rock\", \"resource_uri\": \"\/api\/v1\/type\/6\/\"}, {\"name\": \"steel\", \"resource_uri\": \"\/api\/v1\/type\/9\/\"}], \"modified\": \"2013-11-02T13:09:51.769000\", \"name\": \"Normal\", \"no_effect\": [{\"name\": \"ghost\", \"resource_uri\": \"\/api\/v1\/type\/8\/\"}], \"resistance\": [], \"resource_uri\": \"\/api\/v1\/type\/1\/\", \"super_effective\": [], \"weakness\": [{\"name\": \"fighting\", \"resource_uri\": \"\/api\/v1\/type\/2\/\"}]}"
+    }
+}]
