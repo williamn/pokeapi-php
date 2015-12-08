@@ -8,7 +8,6 @@
         "guzzlehttp/guzzle": "~6.0"
     },
     "require-dev": {
-        "ext-curl": "*",
         "phpunit/phpunit": "5.0.*",
         "php-vcr/php-vcr": "dev-master",
         "php-vcr/phpunit-testlistener-vcr": "*"
