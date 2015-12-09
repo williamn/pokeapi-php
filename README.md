@@ -10,6 +10,10 @@ Pokéapi PHP wrapper
 
 ## Usage
 
+    require 'vendor/autoload.php';
+
+    use Pokeapi\Client;
+
     $client = new Client();
     $pokemon = $client->get('pokemon', 1);
 
