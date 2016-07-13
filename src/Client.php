@@ -5,7 +5,7 @@ class Client
 {
     protected $base_uri;
 
-    function __construct($base_uri = 'http://pokeapi.co/api/v1/')
+    function __construct($base_uri = 'http://pokeapi.co/api/v2/')
     {
         $this->base_uri = $base_uri;
     }
