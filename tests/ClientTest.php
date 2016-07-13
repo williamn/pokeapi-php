@@ -20,7 +20,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     public function testPokemon()
     {
         $client = new PokeApi();
-        $pokemon = $client->get('pokemon', 999);
+        $pokemon = $client->get('pokemon', 1);
         $body = json_decode($pokemon->getBody()->getContents());
         $this->assertEquals($body->name, 'bulbasaur');
     }
@@ -30,9 +30,27 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     */
     public function testType()
     {
-        $client = new Pokeapi();
+        $client = new PokeApi();
         $type = $client->get('type', 1);
         $body = json_decode($type->getBody()->getContents());
         $this->assertEquals($body->name, 'normal');
+    }
+
+    /**
+     * @vcr 404.json
+     */
+    public function testError()
+    {
+        $client = new PokeApi();
+        $response = $client->get('pokemon', 999);
+        $statusCode = json_decode($response->getStatusCode());
+        if ($statusCode == 404)
+        {
+            echo "400-error test passed!";
+        }
+        else
+        {
+            echo "400-error test not passed!";
+        }
     }
 }

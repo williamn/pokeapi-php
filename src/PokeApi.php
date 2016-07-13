@@ -2,7 +2,8 @@
 namespace Pokeapi;
 
 use GuzzleHttp\Client;
-use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7;
+use GuzzleHttp\Exception\ClientException;
 
 class PokeApi
 {
@@ -22,9 +23,22 @@ class PokeApi
         }
 
         $client = new Client(['base_uri' => $this->base_uri]);
-
-        $response = $client->request('GET', $endpoint);
+        
+        $response = null;
+        
+        try
+        {
+            $response = $client->request('GET', $endpoint);
+        }
+        catch (ClientException $e)
+        {
+            if ($e->hasResponse())
+            {
+                $response = $e->getResponse();
+            }
+        }
 
         return $response;
+
     }
 }
