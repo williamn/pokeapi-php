@@ -1,5 +1,5 @@
 <?php
-use Pokeapi\Client;
+use Pokeapi\PokeApi;
 
 class ClientTest extends \PHPUnit_Framework_TestCase
 {
@@ -8,7 +8,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     */
     public function testPokedex()
     {
-        $client = new Client();
+        $client = new PokeApi();
         $pokedex = $client->get('pokedex', 'national');
         $body = json_decode($pokedex->getBody()->getContents());
         $this->assertEquals($body->name, 'national');
@@ -19,8 +19,8 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     */
     public function testPokemon()
     {
-        $client = new Client();
-        $pokemon = $client->get('pokemon', 1);
+        $client = new PokeApi();
+        $pokemon = $client->get('pokemon', 999);
         $body = json_decode($pokemon->getBody()->getContents());
         $this->assertEquals($body->name, 'bulbasaur');
     }
@@ -30,7 +30,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     */
     public function testType()
     {
-        $client = new Client();
+        $client = new Pokeapi();
         $type = $client->get('type', 1);
         $body = json_decode($type->getBody()->getContents());
         $this->assertEquals($body->name, 'normal');

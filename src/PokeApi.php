@@ -1,7 +1,10 @@
 <?php
 namespace Pokeapi;
 
-class Client
+use GuzzleHttp\Client;
+use GuzzleHttp\Psr7\Request;
+
+class PokeApi
 {
     protected $base_uri;
 
@@ -18,7 +21,7 @@ class Client
             $endpoint .= "/{$id}";
         }
 
-        $client = new \GuzzleHttp\Client(['base_uri' => $this->base_uri]);
+        $client = new Client(['base_uri' => $this->base_uri]);
 
         $response = $client->request('GET', $endpoint);
 
