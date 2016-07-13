@@ -9,9 +9,9 @@ class ClientTest extends \PHPUnit_Framework_TestCase
     public function testPokedex()
     {
         $client = new Client();
-        $pokedex = $client->get('pokedex');
+        $pokedex = $client->get('pokedex', 'national');
         $body = json_decode($pokedex->getBody()->getContents());
-        $this->assertEquals($body->objects[0]->name, 'national');
+        $this->assertEquals($body->name, 'national');
     }
 
     /**
@@ -22,7 +22,7 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $client = new Client();
         $pokemon = $client->get('pokemon', 1);
         $body = json_decode($pokemon->getBody()->getContents());
-        $this->assertEquals($body->name, 'Bulbasaur');
+        $this->assertEquals($body->name, 'bulbasaur');
     }
 
     /**
@@ -33,6 +33,6 @@ class ClientTest extends \PHPUnit_Framework_TestCase
         $client = new Client();
         $type = $client->get('type', 1);
         $body = json_decode($type->getBody()->getContents());
-        $this->assertEquals($body->name, 'Normal');
+        $this->assertEquals($body->name, 'normal');
     }
 }
