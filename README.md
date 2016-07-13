@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/williamn/pokeapi-php.svg?branch=master)](https://travis-ci.org/williamn/pokeapi-php)
 
-Pokéapi PHP wrapper
+Pokéapi v2 PHP wrapper
 
 ## Installation
 
