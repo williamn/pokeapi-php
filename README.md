@@ -21,7 +21,7 @@ Pokéapi PHP wrapper
 
 1. Fork it!
 2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
+3. Commit your changes. Please write good commit messages. Here is [a guide](http://codeinthehole.com/writing/a-useful-template-for-commit-messages/).
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
 
