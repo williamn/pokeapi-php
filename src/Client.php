@@ -22,6 +22,8 @@ class Client
 
         $response = $client->request('GET', $endpoint);
 
-        return $response;
+        $result = json_decode($response->getBody()->getContents());
+
+        return $result;
     }
 }
