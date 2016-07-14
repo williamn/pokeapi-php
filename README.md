@@ -2,20 +2,27 @@
 
 [![Build Status](https://travis-ci.org/williamn/pokeapi-php.svg?branch=master)](https://travis-ci.org/williamn/pokeapi-php)
 
-Pokéapi PHP wrapper
+Pokéapi PHP wrapper. Support both v1 and v2 API.
 
 ## Installation
 
-    $ composer install
+```bash
+$ composer install
+```
 
 ## Usage
 
-    require 'vendor/autoload.php';
+```php
+require 'vendor/autoload.php';
 
-    use Pokeapi\Client;
+use Pokeapi\Client;
 
-    $client = new Client();
-    $pokemon = $client->get('pokemon', 1);
+// Default to v2, if you want to call v1 use Client('v1')
+$client = new Client();
+$pokemon = $client->get('berry', 1);
+```
+
+See the test for more usage examples.
 
 ## Contributing
 
